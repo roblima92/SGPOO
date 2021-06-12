@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fornecedor.cpp" />
+    <ClCompile Include="Operações.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="SGPOO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fornecedor.hpp" />
+    <ClInclude Include="Operações.hpp" />
     <ClInclude Include="Pessoa.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
