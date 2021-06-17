@@ -48,4 +48,11 @@ void Fornecedor::GerarDetalhes()
 	cout << "Tem o saldo de: " << this->obtersaldo() << endl;
 }
 
+void Fornecedor::imprimirdetalhes()
+{
+	Pessoa::imprimirdetalhes();
+	cout << "Tem saldo de:" << obtersaldo() << endl;
+}
+
+
 

@@ -2,13 +2,15 @@
 //
 #include <stdlib.h>
 #include <iostream>
-#include "Operações.hpp"
+#include "Operacoes.hpp"
 using namespace std;
 
 int main()
 {
     bool continuar = true;
-    Operações op;
+    Operacoes op;
+
+    op.Iniciar();
 
     while (continuar)
     {
@@ -25,7 +27,10 @@ int main()
             continuar = false;
             break;
         case 1:
-            op.CadastrarFuncionario();
+            op.CadastrarFornecedor();
+            break;
+        case 2:
+            op.BuscarFornecedor();
             break;
         default:
             cout << "Nao consegui compreender, pode informar novamente?" << endl;

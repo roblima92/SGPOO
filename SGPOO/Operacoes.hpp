@@ -5,11 +5,12 @@
 #include<vector>;
 using namespace std;
 
-class Operações
+class Operacoes
 {
 public:
-	void CadastrarFuncionario();
-	void BuscarPessoa(string param);
+	void Iniciar();
+	void CadastrarFornecedor();
+	void BuscarFornecedor();
 private:
 	vector<Fornecedor> fornecedores;
 };

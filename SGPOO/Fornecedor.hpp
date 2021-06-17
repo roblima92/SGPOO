@@ -14,6 +14,7 @@ public:
 	int GetValorCredito();
 	int obtersaldo();
 	void GerarDetalhes();
+	void imprimirdetalhes();
 private:
 	int credito;
 	int divida;
