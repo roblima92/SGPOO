@@ -8,12 +8,12 @@ class Fornecedor : public Pessoa
 public:
 	Fornecedor();
 	Fornecedor(string nome, string endereço,string telefone, int credito);
-	void SetValorCredito(int credito);
-	void SetValorDivida(int divida);
-	int GetValorDivida();
-	int GetValorCredito();
-	int obtersaldo();
-	void GerarDetalhes();
+	void setValorCredito(int credito);
+	void setValorDivida(int divida);
+	int getValorDivida();
+	int getValorCredito();
+	int obterSaldo();
+	void gerarDetalhes();
 private:
 	int credito;
 	int divida;

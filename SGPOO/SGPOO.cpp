@@ -2,21 +2,22 @@
 //
 #include <stdlib.h>
 #include <iostream>
-#include "Operações.hpp"
+#include "Operacoes.hpp"
 using namespace std;
 
 int main()
 {
     bool continuar = true;
-    Operações op;
+    Operacoes op;
 
     while (continuar)
     {
         cout << "Bem vindo ao SGPOO: Sistema de Gestão de Pessoas Orientado ao Objeto\n";
         int switch_on;
-        cout << "Para finalizar a execução digite 0 " << endl;
-        cout << "Para cadastrar um fornecedor digite 1 " << endl;
+        cout << "Para finalizar a execucao digite --> 0 " << endl;
+        cout << "Para cadastrar um fornecedor digite --> 1 " << endl;
         cin >> switch_on;
+
         switch (switch_on)
         {
         case 0:
