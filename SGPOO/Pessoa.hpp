@@ -17,6 +17,7 @@ protected:
 	string nome;
 	string endereço;
 	string telefone;
+
 };
 #endif
 

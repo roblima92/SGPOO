@@ -19,3 +19,7 @@ void Operações::CadastrarFuncionario()
     cin >> credito;
     Fornecedor forn(nome, endereco, telefone, credito);
 }
+
+void Operações::BuscarPessoa(string param)
+{
+}

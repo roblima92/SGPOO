@@ -16,6 +16,7 @@ int main()
         int switch_on;
         cout << "Para finalizar a execução digite 0 " << endl;
         cout << "Para cadastrar um fornecedor digite 1 " << endl;
+        cout << "Para detalhes um fornecedor digite 2 " << endl;
         cin >> switch_on;
         switch (switch_on)
         {
