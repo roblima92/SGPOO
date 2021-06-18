@@ -16,6 +16,7 @@ int main()
         int switch_on;
         cout << "Para finalizar a execucao digite --> 0 " << endl;
         cout << "Para cadastrar um fornecedor digite --> 1 " << endl;
+        cout << "Para cadastrar um empregado digite --> 2 " << endl;
         cin >> switch_on;
 
         switch (switch_on)
@@ -25,7 +26,10 @@ int main()
             continuar = false;
             break;
         case 1:
-            op.CadastrarFuncionario();
+            op.cadastrarFuncionario();
+            break;
+        case 2:
+            op.cadastrarEmpregado();
             break;
         default:
             cout << "Nao consegui compreender, pode informar novamente?" << endl;

@@ -10,7 +10,8 @@ class Operacoes
 {
 
 public:
-	void CadastrarFuncionario();
+	void cadastrarFuncionario();
+	void cadastrarEmpregado();
 private:
 	string nome;
 };
