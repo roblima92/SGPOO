@@ -15,43 +15,43 @@ Fornecedor::Fornecedor(string nome, string endereço, string telefone, int credit
 	this->divida = 0;
 }
 
-void Fornecedor::SetValorCredito(int credito)
+void Fornecedor::setValorCredito(int credito)
 {
 	this->credito = credito;
 }
 
-void Fornecedor::SetValorDivida(int divida)
+void Fornecedor::setValorDivida(int divida)
 {
 	this->divida = divida;
 }
 
-int Fornecedor::GetValorDivida()
+int Fornecedor::getValorDivida()
 {
 	return divida;
 }
 
-int Fornecedor::GetValorCredito()
+int Fornecedor::getValorCredito()
 {
 	return credito;
 }
 
-int Fornecedor::obtersaldo()
+int Fornecedor::obterSaldo()
 {
 	return credito - divida;
 }
 
-void Fornecedor::GerarDetalhes()
+void Fornecedor::gerarDetalhes()
 {
 	cout << "O fornecedor: " << Pessoa::getNome() << endl;
 	cout << "Esta situado em: " << Pessoa::getEndereço() << endl;
 	cout << "Telefone: " << Pessoa::getTelefone() << endl;
-	cout << "Tem o saldo de: " << this->obtersaldo() << endl;
+	cout << "Tem o saldo de: " << this->obterSaldo() << endl;
 }
 
 void Fornecedor::imprimirdetalhes()
 {
 	Pessoa::imprimirdetalhes();
-	cout << "Tem saldo de:" << obtersaldo() << endl;
+	cout << "Tem saldo de:" << obterSaldo() << endl;
 }
 
 

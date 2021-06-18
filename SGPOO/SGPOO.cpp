@@ -16,10 +16,11 @@ int main()
     {
         cout << "Bem vindo ao SGPOO: Sistema de Gestão de Pessoas Orientado ao Objeto\n";
         int switch_on;
-        cout << "Para finalizar a execução digite 0 " << endl;
-        cout << "Para cadastrar um fornecedor digite 1 " << endl;
-        cout << "Para detalhes um fornecedor digite 2 " << endl;
+        cout << "Para finalizar a execucao digite --> 0 " << endl;
+        cout << "Para cadastrar um fornecedor digite --> 1 " << endl;
+        cout << "Para cadastrar um empregado digite --> 2 " << endl;
         cin >> switch_on;
+
         switch (switch_on)
         {
         case 0:
@@ -30,7 +31,7 @@ int main()
             op.CadastrarFornecedor();
             break;
         case 2:
-            op.BuscarFornecedor();
+            op.cadastrarEmpregado();
             break;
         default:
             cout << "Nao consegui compreender, pode informar novamente?" << endl;
