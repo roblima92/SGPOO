@@ -45,5 +45,14 @@ void Fornecedor::gerarDetalhes()
 	cout << "O fornecedor: " << Pessoa::getNome() << endl;
 	cout << "Esta situado em: " << Pessoa::getEndereço() << endl;
 	cout << "Telefone: " << Pessoa::getTelefone() << endl;
-	cout << "Tem o saldo de: " << this->obterSaldo() << endl;
+	cout << "Tem o saldo de: " << this->obtersaldo() << endl;
 }
+
+void Fornecedor::imprimirdetalhes()
+{
+	Pessoa::imprimirdetalhes();
+	cout << "Tem saldo de:" << obtersaldo() << endl;
+}
+
+
+

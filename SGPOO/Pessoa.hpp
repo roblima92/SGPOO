@@ -13,10 +13,12 @@ public:
 	string getEndereço();
 	void setTelefone(string telefone);
 	string getTelefone();
+	virtual void imprimirdetalhes();
 protected:
 	string nome;
-	string endereço;
+	string endereco;
 	string telefone;
+
 };
 #endif
 

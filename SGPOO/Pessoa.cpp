@@ -3,7 +3,7 @@
 Pessoa::Pessoa(string nome, string endereço, string telefone)
 {
 	this->nome = nome;
-	this->endereço = endereço;
+	this->endereco = endereço;
 	this->telefone = telefone;
 }
 
@@ -23,12 +23,12 @@ string Pessoa::getNome()
 
 void Pessoa::setEndereço(string endereço)
 {
-	this->endereço = endereço;
+	this->endereco = endereço;
 }
 
 string Pessoa::getEndereço()
 {
-	return endereço;
+	return endereco;
 }
 
 void Pessoa::setTelefone(string telefone)
@@ -39,4 +39,11 @@ void Pessoa::setTelefone(string telefone)
 string Pessoa::getTelefone()
 {
 	return telefone;
+}
+
+void Pessoa::imprimirdetalhes()
+{
+	cout << "Nome: " << nome << endl;
+	cout << "endereço: " << endereco << endl;
+	cout << "telefone: " << telefone << endl;
 }

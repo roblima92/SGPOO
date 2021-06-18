@@ -10,6 +10,8 @@ int main()
     bool continuar = true;
     Operacoes op;
 
+    op.Iniciar();
+
     while (continuar)
     {
         cout << "Bem vindo ao SGPOO: Sistema de Gestão de Pessoas Orientado ao Objeto\n";
@@ -26,7 +28,7 @@ int main()
             continuar = false;
             break;
         case 1:
-            op.cadastrarFuncionario();
+            op.CadastrarFornecedor();
             break;
         case 2:
             op.cadastrarEmpregado();

@@ -1,19 +1,21 @@
 #include <iostream>
 #pragma once
-
-#ifndef Operacoes_hpp
-#define Operacoes_hpp
-
+#ifndef Operações_hpp
+#define Operações_hpp
+#include "Fornecedor.hpp"
+#include<vector>;
 using namespace std;
 
 class Operacoes
 {
 
 public:
-	void cadastrarFuncionario();
+	void Iniciar();
+	void CadastrarFornecedor();
+	void BuscarFornecedor();
 	void cadastrarEmpregado();
 private:
-	string nome;
+	vector<Fornecedor> fornecedores;
 };
-#endif // !Operacoes_hpp
+#endif // !Operações_hpp
 

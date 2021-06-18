@@ -1,9 +1,18 @@
 #include "Operacoes.hpp"
 #include <iostream>
 #include "Fornecedor.hpp"
+#include<iostream>
 #include "Empregado.hpp"
 
-void Operacoes::cadastrarFuncionario()
+
+void Operacoes::Iniciar()
+{
+    fornecedores.push_back(Fornecedor("gabriel", "rua", "00000-000000", 100));
+    fornecedores.push_back(Fornecedor("ronaldo", "ladera", "10000-000000", 100));
+    fornecedores.push_back(Fornecedor("maicon", "rua", "20000-000000", 100));
+}
+
+void Operacoes::CadastrarFornecedor()
 {
     cout << "------------------------------------" << endl;
     string nome;
@@ -21,16 +30,13 @@ void Operacoes::cadastrarFuncionario()
     Fornecedor forn(nome, endereco, telefone, credito);
 }
 
-void Operacoes::cadastrarEmpregado()
+void Operacoes::cadastrarEmpregado() 
 {
-    cout << "------------------------------------" << endl;
     string nome;
     string telefone;
     string endereco;
     float salario;
     int codigoSetor;
-    cout << "Qual o nome do nosso Funcionario?\n" << endl;
-    cin >> nome;
     cout << "Onde mora nosso Funcionario?\n" << endl;
     cin >> endereco;
     cout << "Qual o telefone do nosso Funcionario?\n" << endl;
@@ -40,4 +46,21 @@ void Operacoes::cadastrarEmpregado()
     cout << "Qual o codigo do setor do funcionario?\n" << endl;
     cin >> codigoSetor;
     Empregado forn(nome, endereco, telefone, codigoSetor, salario);
+    
+
+}
+void Operacoes::BuscarFornecedor()
+{
+    string nome;
+    cout << "Digite o nome do funcionario" << endl;
+    cin >> nome;
+
+    for (size_t i = 0; i < fornecedores.size(); i++)
+    {
+        if (fornecedores[i].getNome() == nome)
+        {
+            fornecedores[i].imprimirdetalhes();
+        }
+    }
+   
 }
