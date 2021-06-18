@@ -15,12 +15,12 @@ Empregado::Empregado(string nome, string endereço, string telefone, int codigoSe
 	this->salario = salario;
 }
 
-void Empregado::getCodigoSetor(int setor)
+void Empregado::setCodigoSetor(int setor)
 {
 	this->codigoSetor = codigoSetor;
 }
 
-void Empregado::getSalarioBase(float salario)
+void Empregado::setSalarioBase(float salario)
 {
 	this->salario = salario;
 }
@@ -38,8 +38,7 @@ float Empregado::calculaSalario(float salario)
 	else if(salario >= 3751.06 && salario <= 4664.68){
 		return salario - (salario * 22, 5) / 100;
 	}
-	else
-	{
+	else{
 		return salario - (salario * 27, 5) / 100;
 	}
 }

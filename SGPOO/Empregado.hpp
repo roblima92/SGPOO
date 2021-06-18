@@ -8,11 +8,11 @@ class Empregado : public Pessoa
 public:
 	Empregado();
 	Empregado(string nome, string endereço, string telefone, int codigoSetor, float salario);
-	void getCodigoSetor(int credito);
-	void getSalarioBase(float salario);
+	void setCodigoSetor(int credito);
+	void setSalarioBase(float salario);
 	float calculaSalario(float salario);
 	void gerarDetalhes();
-private:
+protected:
 	int codigoSetor;
 	float salario;
 };
