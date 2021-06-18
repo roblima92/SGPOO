@@ -10,11 +10,11 @@ public:
 	Empregado(string nome, string endereço, string telefone, int codigoSetor, float salario);
 	void setCodigoSetor(int credito);
 	void setSalarioBase(float salario);
-	float calculaSalario(float salario);
-	void gerarDetalhes();
+	virtual float calculaSalario();
+	void imprimirdetalhes();
 protected:
 	int codigoSetor;
 	float salario;
 };
-#endif // !Fornecedor_hpp
+#endif
 

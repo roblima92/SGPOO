@@ -25,7 +25,7 @@ void Empregado::setSalarioBase(float salario)
 	this->salario = salario;
 }
 
-float Empregado::calculaSalario(float salario)
+float Empregado::calculaSalario()
 {
 	if (salario < 1903.99) {
 		return salario;
@@ -38,15 +38,14 @@ float Empregado::calculaSalario(float salario)
 	else if(salario >= 3751.06 && salario <= 4664.68){
 		return salario - (salario * 22, 5) / 100;
 	}
-	else{
+	else
+	{
 		return salario - (salario * 27, 5) / 100;
 	}
 }
 
-void Empregado::gerarDetalhes()
+void Empregado::imprimirdetalhes()
 {
-	cout << "O Empregado: " << Pessoa::getNome() << endl;
-	cout << "Esta situado em: " << Pessoa::getEndereço() << endl;
-	cout << "Telefone: " << Pessoa::getTelefone() << endl;
-	cout << "Tem o salario LIQUIDO de: " << this->calculaSalario(salario) << endl;
+	Pessoa::imprimirdetalhes();
+	cout << "Tem o salario LIQUIDO de: " << this->calculaSalario() << endl;
 }
