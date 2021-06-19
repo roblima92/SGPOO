@@ -1,19 +1,19 @@
 #pragma once
-#ifndef operario_hpp
-#define operario_hpp
-#include "operario.hpp"
+#ifndef Operario_hpp
+#define Operario_hpp
+#include "Operario.hpp"
 #include "Empregado.hpp"
 
-class operario : public Empregado
-{
+class Operario : public Empregado {
+
 public:
-	operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorprod, float comissao);
-	operario();
+	Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProd, float comissao);
+	Operario();
 	float calculaSalario();
-	void imprimirdetalhes();
+	void imprimirDetalhes();
+
 private:
-	float valorproducao;
+	float valorProducao;
 	float comissao;
 };
-#endif
-
+#endif //!Operario_hpp

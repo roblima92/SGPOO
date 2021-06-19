@@ -1,5 +1,5 @@
 // SGPOO.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
-//
+
 #include <stdlib.h>
 #include <iostream>
 #include "Operacoes.hpp"
@@ -28,7 +28,7 @@ int main()
             continuar = false;
             break;
         case 1:
-            op.CadastrarFornecedor();
+            op.cadastrarFornecedor();
             break;
         case 2:
             op.cadastrarEmpregado();

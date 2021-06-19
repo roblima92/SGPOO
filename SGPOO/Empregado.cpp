@@ -44,8 +44,8 @@ float Empregado::calculaSalario()
 	}
 }
 
-void Empregado::imprimirdetalhes()
+void Empregado::imprimirDetalhes()
 {
-	Pessoa::imprimirdetalhes();
+	Pessoa::imprimirDetalhes();
 	cout << "Tem o salario LIQUIDO de: " << this->calculaSalario() << endl;
 }

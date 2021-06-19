@@ -3,8 +3,8 @@
 #define Fornecedor_hpp
 #include "Pessoa.hpp"
 
-class Fornecedor : public Pessoa
-{
+class Fornecedor : public Pessoa {
+
 public:
 	Fornecedor();
 	Fornecedor(string nome, string endere�o,string telefone, int credito);
@@ -14,10 +14,11 @@ public:
 	int getValorCredito();
 	int obterSaldo();
 	void gerarDetalhes();
-	void imprimirdetalhes();
+	void imprimirDetalhes();
+
 private:
 	int credito;
 	int divida;
 };
-#endif // !Fornecedor_hpp
+#endif //!Fornecedor_hpp
 

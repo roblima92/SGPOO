@@ -3,18 +3,19 @@
 #define Empregado_hpp
 #include "Pessoa.hpp"
 
-class Empregado : public Pessoa
-{
+class Empregado : public Pessoa {
+
 public:
 	Empregado();
 	Empregado(string nome, string endereço, string telefone, int codigoSetor, float salario);
 	void setCodigoSetor(int credito);
 	void setSalarioBase(float salario);
 	virtual float calculaSalario();
-	void imprimirdetalhes();
+	void imprimirDetalhes();
+
 protected:
 	int codigoSetor;
 	float salario;
 };
-#endif
+#endif //!Empregado_hpp
 

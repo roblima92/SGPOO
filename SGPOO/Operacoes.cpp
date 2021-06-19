@@ -10,10 +10,10 @@ void Operacoes::Iniciar()
     fornecedores.push_back(Fornecedor("gabriel", "rua", "00000-000000", 100));
     fornecedores.push_back(Fornecedor("ronaldo", "ladera", "10000-000000", 100));
     fornecedores.push_back(Fornecedor("maicon", "rua", "20000-000000", 100));
-    operarios.push_back(operario("ruan", "maua", "34546-4654", 1, 4500, 6000, 5));
+    operarios.push_back(Operario("ruan", "maua", "34546-4654", 1, 4500, 6000, 5));
 }
 
-void Operacoes::CadastrarFornecedor()
+void Operacoes::cadastrarFornecedor()
 {
     cout << "------------------------------------" << endl;
     string nome;
@@ -52,7 +52,7 @@ void Operacoes::cadastrarEmpregado()
     
 
 }
-void Operacoes::cadastraroperario()
+void Operacoes::cadastrarOperario()
 {
     string nome;
     string telefone;
@@ -76,9 +76,9 @@ void Operacoes::cadastraroperario()
     cout << "Qual a comissao do funcionario?\n" << endl;
     cin >> comissao;
 
-    operarios.push_back(operario(nome, endereco, telefone, codigoSetor, salario, valorproducao, comissao));
+    operarios.push_back(Operario(nome, endereco, telefone, codigoSetor, salario, valorproducao, comissao));
 }
-void Operacoes::buscaroperario()
+void Operacoes::buscarOperario()
 {
     string nome;
     cout << "Digite o nome ou id do operario" << endl;
@@ -88,11 +88,11 @@ void Operacoes::buscaroperario()
     {
         if (operarios[i].getNome() == nome || to_string(i) == nome)
         {
-            operarios[i].imprimirdetalhes();
+            operarios[i].imprimirDetalhes();
         }
     }
 }
-void Operacoes::cadastrarvendedor()
+void Operacoes::cadastrarVendedor()
 {
     string nome;
     string telefone;
@@ -116,10 +116,10 @@ void Operacoes::cadastrarvendedor()
     cout << "Qual a comissao do vendedor?\n" << endl;
     cin >> comissao;
 
-    vendedores.push_back(vendedor(nome, endereco, telefone, codigoSetor, salario, valorvendido, comissao));
+    vendedores.push_back(Vendedor(nome, endereco, telefone, codigoSetor, salario, valorvendido, comissao));
 }
 
-void Operacoes::buscavendedor()
+void Operacoes::buscarVendedor()
 {
     string nome;
     cout << "Digite o nome ou id do vendedor" << endl;
@@ -129,12 +129,12 @@ void Operacoes::buscavendedor()
     {
         if (vendedores[i].getNome() == nome || to_string(i) == nome)
         {
-            vendedores[i].imprimirdetalhes();
+            vendedores[i].imprimirDetalhes();
         }
     }
 }
 
-void Operacoes::BuscarFornecedor()
+void Operacoes::buscarFornecedor()
 {
     string nome;
     cout << "Digite o nome ou id do funcionario" << endl;
@@ -144,9 +144,8 @@ void Operacoes::BuscarFornecedor()
     {
         if (fornecedores[i].getNome() == nome || to_string(i) == nome)
         {
-            fornecedores[i].imprimirdetalhes();
+            fornecedores[i].imprimirDetalhes();
         }
     }
-   
 }
 
