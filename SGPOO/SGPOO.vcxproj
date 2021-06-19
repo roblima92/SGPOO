@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Administrador.cpp" />
     <ClCompile Include="Empregado.cpp" />
     <ClCompile Include="Fornecedor.cpp" />
     <ClCompile Include="Operacoes.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="Vendedor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Administrador.hpp" />
     <ClInclude Include="Empregado.hpp" />
     <ClInclude Include="Fornecedor.hpp" />
     <ClInclude Include="Operacoes.hpp" />

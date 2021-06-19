@@ -13,14 +13,7 @@ Vendedor::Vendedor(string nome, string endereco, string telefone, int codigoSeto
 
 float Vendedor::calculaSalario()
 {
-    return Empregado::calculaSalario() + getComissao();
-}
-
-void Vendedor::imprimirDetalhes()
-{
-	cout << "Vendeu:" << this->valorVendas << endl;
-	cout << "Tem comissao = " << this->comissao << endl;
-	cout << "Salario total = " << calculaSalario() << endl;
+    return (salario - Empregado::descontoImposto()) + getComissao(); //VALOR DE COMISSÃO NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
 }
 
 void Vendedor::registrarVenda(float valorVenda)
@@ -31,4 +24,12 @@ void Vendedor::registrarVenda(float valorVenda)
 float Vendedor::getComissao()
 {
 	return valorVendas * (comissao / 100);
+}
+
+void Vendedor::imprimirDetalhes()
+{
+	Empregado::imprimirDetalhes();
+	cout << "Vendeu:" << this->valorVendas << endl;
+	cout << "Tem comissao de: " << this->comissao << endl;
+	cout << "Totalizando um salario de: " << calculaSalario() << endl;
 }

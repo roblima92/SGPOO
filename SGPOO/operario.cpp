@@ -1,5 +1,11 @@
 #include "Operario.hpp"
 
+Operario::Operario()
+{
+	this->valorProducao = 0;
+	this->comissao = 0;
+}
+
 Operario::Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProd, float comissao)
 {
 	this->nome = nome;
@@ -11,15 +17,9 @@ Operario::Operario(string nome, string endereco, string telefone, int codigoSeto
 	this->comissao = comissao;
 }
 
-Operario::Operario()
-{
-	this->valorProducao = 0;
-	this->comissao = 0;
-}
-
 float Operario::calculaSalario()
 {
-	return Empregado::calculaSalario() + (valorProducao * ((comissao / 100)));
+	return (salario - Empregado::descontoImposto()) + (valorProducao * ((comissao / 100)));  //VALOR DE COMISSÃO NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
 }
 
 void Operario::imprimirDetalhes()
