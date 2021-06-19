@@ -2,9 +2,11 @@
 #include <iostream>
 #ifndef Pessoa_hpp
 #define Pessoa_hpp
-using namespace std;
-class Pessoa {
 
+using namespace std;
+
+class Pessoa 
+{
 public:
 	Pessoa(string nome, string endereço, string telefone);
 	Pessoa();

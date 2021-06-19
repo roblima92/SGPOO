@@ -8,17 +8,19 @@ using namespace std;
 int main()
 {
     bool continuar = true;
+    int switch_on;
     Operacoes op;
 
     op.Iniciar();
 
     while (continuar)
     {
-        cout << "Bem vindo ao SGPOO: Sistema de Gestão de Pessoas Orientado ao Objeto\n";
-        int switch_on;
-        cout << "Para finalizar a execucao digite --> 0 " << endl;
-        cout << "Para cadastrar um fornecedor digite --> 1 " << endl;
-        cout << "Para cadastrar um empregado digite --> 2 " << endl;
+        cout << "\n\n\nBem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto\n\n";
+        cout << "Para cadastrar um Fornecedor, digite --> 1 " << endl;
+        cout << "Para cadastrar um Funcionario--Adminstrador, digite --> 2 " << endl;
+        cout << "Para cadastrar um Funcionario--Operario, digite --> 3 " << endl;
+        cout << "Para cadastrar um Funcionario--Vendedor, digite --> 4 " << endl;
+        cout << "Para finalizar a execucao, digite --> 0 " << endl;
         cin >> switch_on;
 
         switch (switch_on)
@@ -31,7 +33,13 @@ int main()
             op.cadastrarFornecedor();
             break;
         case 2:
-            op.cadastrarEmpregado();
+            op.cadastrarAdministrador();
+            break;
+        case 3:
+            op.cadastrarOperario();
+            break;
+        case 4:
+            op.cadastrarVendedor();
             break;
         default:
             cout << "Nao consegui compreender, pode informar novamente?" << endl;

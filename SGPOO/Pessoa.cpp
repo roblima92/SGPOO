@@ -44,6 +44,6 @@ string Pessoa::getTelefone()
 void Pessoa::imprimirDetalhes()
 {
 	cout << "Nome: " << nome << endl;
-	cout << "endereço: " << endereco << endl;
-	cout << "telefone: " << telefone << endl;
+	cout << "Endereço: " << endereco << endl;
+	cout << "Telefone: " << telefone << endl;
 }
