@@ -21,7 +21,7 @@ string Pessoa::getNome()
 	return nome;
 }
 
-void Pessoa::setEndereço(string endereço)
+void Pessoa::setEndereço(string endereco)
 {
 	this->endereco = endereco;
 }

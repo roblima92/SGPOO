@@ -8,9 +8,9 @@ Fornecedor::Fornecedor()
 
 Fornecedor::Fornecedor(string nome, string endereço, string telefone, int credito)
 {
-	Pessoa::setNome(nome);
-	Pessoa::setEndereço(endereço);
-	Pessoa::setTelefone(telefone);
+	this->nome = nome;
+	this->endereco = endereço;
+	this->telefone = telefone;
 	this->credito = credito;
 	this->divida = 0;
 }

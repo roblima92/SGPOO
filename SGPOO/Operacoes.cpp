@@ -40,6 +40,8 @@ void Operacoes::cadastrarOperario()
     cin >> valorProducao;
     cout << "\nQual a comissao do funcionario - Operario?\n" << endl;
     cin >> comissao;
+    cout << "ID: " << operarios.size() + 1 << endl;
+    system("pause");
 
     operarios.push_back(Operario(nome, endereco, telefone, codigoSetor, salario, valorProducao, comissao));
 }
@@ -83,7 +85,7 @@ void Operacoes::cadastrarVendedor()
     cin >> valorVendido;
     cout << "\nQual a comissao do funcionario - Vendedor?" << endl;
     cin >> comissao;
-    cout << "ID: " << vendedores.size() << endl;
+    cout << "ID: " << vendedores.size() + 1 << endl;
     system("pause");
 
     vendedores.push_back(Vendedor(nome, endereco, telefone, codigoSetor, salario, valorVendido, comissao));
@@ -125,7 +127,7 @@ void Operacoes::cadastrarAdministrador()
     cin >> codigoSetor;
     cout << "\nQual o valor da ajuda de custo recebida pelo funcionario - Administrador?" << endl;
     cin >> ajudaDeCusto;
-    cout << "\nID: " << administradores.size() << endl;
+    cout << "\nID: " << administradores.size() + 1 << endl;
     system("pause");
 
     administradores.push_back(Administrador(nome, endereco, telefone, codigoSetor, salario, ajudaDeCusto));
@@ -160,10 +162,8 @@ void Operacoes::cadastrarFornecedor()
     cout << "\nQual o telefone do nosso Fornecedor?" << endl;
     cin >> telefone;
     cout << "\nQuanto de credito tem nosso Fornecedor?" << endl;
-    cout << "ID: " << fornecedores.size() << endl;
-    system("pause");
     cin >> credito;
-    cout << "\nID: " << fornecedores.size() << endl;
+    cout << "\nID: " << fornecedores.size() + 1 << endl;
     system("pause");
 
     fornecedores.push_back(Fornecedor(nome, endereco, telefone, credito));
