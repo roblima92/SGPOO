@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class Operacoes 
+class Operacoes
 {
 public:
 	void Iniciar();
@@ -22,7 +22,13 @@ public:
 	void buscarFornecedor();
 	void buscarOperario();
 	void buscarVendedor();
-	void registrarVenda();
+	void editarpessoa();
+	void listapessoa();
+	void listafornecedor();
+	void listaempregados();
+	void listaadministradores();
+	void listaoperarios();
+	void listavendedores();
 
 private:
 	vector<Fornecedor> fornecedores;

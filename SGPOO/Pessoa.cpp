@@ -41,7 +41,15 @@ string Pessoa::getTelefone()
 	return telefone;
 }
 
+
 void Pessoa::imprimirDetalhes()
+{
+	cout << "Nome: " << nome << endl;
+	cout << "Endereço: " << endereco << endl;
+	cout << "Telefone: " << telefone << endl;
+}
+
+void Pessoa::imprimedetalhespessoa()
 {
 	cout << "Nome: " << nome << endl;
 	cout << "Endereço: " << endereco << endl;
