@@ -1,6 +1,6 @@
-#include "vendedor.hpp"
+#include "Vendedor.hpp"
 
-vendedor::vendedor(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorvendas, float comissao)
+Vendedor::Vendedor(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorVendas, float comissao)
 {
 	this->nome = nome;
 	this->endereco = endereco;
@@ -8,27 +8,38 @@ vendedor::vendedor(string nome, string endereco, string telefone, int codigoSeto
 	this->codigoSetor = codigoSetor;
 	this->salario = salario;
 	this->comissao = comissao;
-	this->valorvendas = valorvendas;
+	this->valorVendas = valorVendas;
 }
 
-float vendedor::calculaSalario()
+float Vendedor::calculaSalario()
 {
-    return Empregado::calculaSalario() + getcomissao();
+	return (salario - Empregado::descontoImposto()) + getComissao(); //VALOR DE COMISSÃO NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
 }
 
-void vendedor::imprimirdetalhes()
+/// <summary>
+/// editado para ser um set simples
+/// </summary>
+/// <param name="valorVenda">novo valor da venda</param>
+void Vendedor::registrarVenda(float valorVenda)
 {
-	cout << "vendeu:" << this->valorvendas << endl;
-	cout << "tem comissao = " << this->comissao << endl;
-	cout << "salario total = " << calculaSalario() << endl;
+	//editado para ser um set simples
+	this->valorVendas = valorVenda;
 }
 
-void vendedor::registrarvenda(float valorvenda)
+void Vendedor::setComissao(float comissao)
 {
-	this->valorvendas += valorvenda;
+	this->comissao = comissao;
 }
 
-float vendedor::getcomissao()
+float Vendedor::getComissao()
 {
-	return valorvendas * (comissao / 100);
+	return valorVendas * (comissao / 100);
+}
+
+void Vendedor::imprimirDetalhes()
+{
+	Empregado::imprimirDetalhes();
+	cout << "Vendeu:" << this->valorVendas << endl;
+	cout << "Tem comissao de: " << this->comissao << endl;
+	cout << "Totalizando um salario de: " << calculaSalario() << endl;
 }

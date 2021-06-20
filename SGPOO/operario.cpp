@@ -1,30 +1,40 @@
-#include "operario.hpp"
+#include "Operario.hpp"
 
-operario::operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorprod, float comissao)
+Operario::Operario()
+{
+	this->valorProducao = 0;
+	this->comissao = 0;
+}
+
+Operario::Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProd, float comissao)
 {
 	this->nome = nome;
 	this->endereco = endereco;
 	this->telefone = telefone;
 	this->codigoSetor = codigoSetor;
 	this->salario = salario;
-	this->valorproducao = valorprod;
+	this->valorProducao = valorProd;
 	this->comissao = comissao;
 }
 
-operario::operario()
+float Operario::calculaSalario()
 {
-	this->valorproducao = 0;
-	this->comissao = 0;
+	return (salario - Empregado::descontoImposto()) + (valorProducao * ((comissao / 100)));  //VALOR DE COMISSÃO NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
 }
 
-float operario::calculaSalario()
+void Operario::imprimirDetalhes()
 {
-	return Empregado::calculaSalario() + (valorproducao * ((comissao / 100)));
+	Empregado::imprimirDetalhes();
+	cout << "Recebe " << comissao << "de comissao";
+	cout << "Totalizando um salario de: " << calculaSalario();
 }
 
-void operario::imprimirdetalhes()
+void Operario::setProducao(float producao)
 {
-	Empregado::imprimirdetalhes();
-	cout << "recebe " << comissao << "de comissao";
-	cout << "totalizando um salario de: " << calculaSalario();
+	this->valorProducao = producao;
+}
+
+void Operario::setComissao(float comissao)
+{
+	this->comissao = comissao;
 }

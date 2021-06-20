@@ -1,18 +1,20 @@
 #pragma once
-#ifndef vendedor_hpp
-#define vendedor_hpp
+#ifndef Vendedor_hpp
+#define Vendedor_hpp
 #include "Empregado.hpp"
-class vendedor : public Empregado
+
+class Vendedor : public Empregado
 {
 public:
-	vendedor(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorvendas, float comissao);
+	Vendedor(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorvendas, float comissao);
 	float calculaSalario();
-	void imprimirdetalhes();
-	void registrarvenda(float valorvenda);
-private:
-	float valorvendas;
-	float comissao;
-	float getcomissao();
-};
-#endif // !vendedor_hpp
+	void imprimirDetalhes();
+	void registrarVenda(float valorvenda);
+	void setComissao(float comissao);
 
+private:
+	float valorVendas;
+	float comissao;
+	float getComissao();
+};
+#endif //!Vendedor_hpp

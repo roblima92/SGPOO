@@ -1,9 +1,9 @@
 #include "Pessoa.hpp"
 
-Pessoa::Pessoa(string nome, string endereço, string telefone)
+Pessoa::Pessoa(string nome, string endereco, string telefone)
 {
 	this->nome = nome;
-	this->endereco = endereço;
+	this->endereco = endereco;
 	this->telefone = telefone;
 }
 
@@ -21,9 +21,9 @@ string Pessoa::getNome()
 	return nome;
 }
 
-void Pessoa::setEndereço(string endereço)
+void Pessoa::setEndereço(string endereco)
 {
-	this->endereco = endereço;
+	this->endereco = endereco;
 }
 
 string Pessoa::getEndereço()
@@ -41,9 +41,15 @@ string Pessoa::getTelefone()
 	return telefone;
 }
 
-void Pessoa::imprimirdetalhes()
+
+void Pessoa::imprimirDetalhes()
+{
+	imprimirDetalhesPessoas();
+}
+
+void Pessoa::imprimirDetalhesPessoas()
 {
 	cout << "Nome: " << nome << endl;
-	cout << "endereço: " << endereco << endl;
-	cout << "telefone: " << telefone << endl;
+	cout << "Endereco: " << endereco << endl;
+	cout << "Telefone: " << telefone << endl;
 }
