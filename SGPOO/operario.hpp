@@ -10,6 +10,8 @@ public:
 	Operario();
 	float calculaSalario();
 	void imprimirDetalhes();
+	void setProducao(float producao);
+	void setComissao(float comissao);
 
 private:
 	float valorProducao;

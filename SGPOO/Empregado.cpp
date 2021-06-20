@@ -37,20 +37,28 @@ float Empregado::descontoImposto()
 		return 0;
 	}
 	else if (salario >= 1903.99 && salario <= 2826.65) {
-		return (salario * 7, 5) / 100;
+		return (salario * 7.5) / 100;
 	}
 	else if (salario >= 2826.66 && salario <= 3751.05) {
 		return (salario * 15) / 100;
 	}
 	else if (salario >= 3751.06 && salario <= 4664.68) {
-		return (salario * 22, 5) / 100;
+		return (salario * 22.5) / 100;
 	}
 	else {
-		return (salario * 27, 5) / 100;
+		return (salario * 27.5) / 100;
 	}
 }
 
 void Empregado::imprimirDetalhes()
 {
 	Pessoa::imprimirDetalhes();
+	cout << "Trabalha no Setor: " << codigoSetor << endl;
+	cout << "Salario Bruto: " << salario << endl;
+	cout << "Imposto Descontado: " << descontoImposto() << endl;
+}
+
+void Empregado::imprimirDetalhesEmpregados()
+{
+	this->imprimirDetalhes();
 }

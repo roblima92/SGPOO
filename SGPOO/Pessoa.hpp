@@ -17,6 +17,7 @@ public:
 	void setTelefone(string telefone);
 	string getTelefone();
 	virtual void imprimirDetalhes();
+	void imprimirDetalhesPessoas();
 
 protected:
 	string nome;

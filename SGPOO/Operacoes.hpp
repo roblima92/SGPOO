@@ -22,7 +22,13 @@ public:
 	void buscarFornecedor();
 	void buscarOperario();
 	void buscarVendedor();
-	void registrarVenda();
+	void editarPessoa();
+	void listarPessoas();
+	void listarFornecedores();
+	void listarEmpregados();
+	void listarAdministradores();
+	void listarOperarios();
+	void listarVendedores();
 
 private:
 	vector<Fornecedor> fornecedores;

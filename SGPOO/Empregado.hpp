@@ -13,6 +13,7 @@ public:
 	virtual float calculaSalario() = 0;			//METODO VIRTUAL, POIS CADA CLASSE QUE HERDA DE EMPREGADO, TEM UM FORMULA DIFERENTE PARA CALCULO DO SEU SÁLARIO;
 	float descontoImposto();
 	void imprimirDetalhes();
+	void imprimirDetalhesEmpregados();
 
 protected:
 	int codigoSetor;

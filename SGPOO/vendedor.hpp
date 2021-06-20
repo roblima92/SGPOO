@@ -10,6 +10,7 @@ public:
 	float calculaSalario();
 	void imprimirDetalhes();
 	void registrarVenda(float valorvenda);
+	void setComissao(float comissao);
 
 private:
 	float valorVendas;

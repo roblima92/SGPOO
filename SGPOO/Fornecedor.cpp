@@ -53,4 +53,3 @@ void Fornecedor::imprimirDetalhes()
 	Pessoa::imprimirDetalhes();
 	cout << "Tem saldo de:" << obterSaldo() << endl;
 }
-

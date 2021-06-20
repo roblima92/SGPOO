@@ -10,6 +10,8 @@ public:
 	Administrador();
 	float calculaSalario();
 	void imprimirDetalhes();
+	void setAjudaDeCusto(float ajuda);
+	float getAjudaDeCusto();
 
 private:
 	float ajudaDeCusto;

@@ -16,9 +16,19 @@ float Vendedor::calculaSalario()
     return (salario - Empregado::descontoImposto()) + getComissao(); //VALOR DE COMISSÃO NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
 }
 
+/// <summary>
+/// editado para ser um set simples
+/// </summary>
+/// <param name="valorVenda">novo valor da venda</param>
 void Vendedor::registrarVenda(float valorVenda)
 {
-	this->valorVendas += valorVenda;
+	//editado para ser um set simples
+	this->valorVendas = valorVenda;
+}
+
+void Vendedor::setComissao(float comissao)
+{
+	this->comissao = comissao;
 }
 
 float Vendedor::getComissao()

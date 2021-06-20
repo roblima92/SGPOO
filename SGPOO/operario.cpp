@@ -28,3 +28,13 @@ void Operario::imprimirDetalhes()
 	cout << "Recebe " << comissao << "de comissao";
 	cout << "Totalizando um salario de: " << calculaSalario();
 }
+
+void Operario::setProducao(float producao)
+{
+	this->valorProducao = producao;
+}
+
+void Operario::setComissao(float comissao)
+{
+	this->comissao = comissao;
+}

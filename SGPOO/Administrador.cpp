@@ -26,3 +26,13 @@ void Administrador::imprimirDetalhes()
 	cout << "Tem uma ajuda de custo de: " << ajudaDeCusto << endl;
 	cout << "Totalizando um salario de: " << calculaSalario();
 }
+
+void Administrador::setAjudaDeCusto(float ajuda)
+{
+	this->ajudaDeCusto = ajuda;
+}
+
+float Administrador::getAjudaDeCusto()
+{
+	return ajudaDeCusto;
+}
