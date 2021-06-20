@@ -3,7 +3,7 @@
 #define Vendedor_hpp
 #include "Empregado.hpp"
 
-class Vendedor : public Empregado 
+class Vendedor : public Empregado
 {
 public:
 	Vendedor(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorvendas, float comissao);

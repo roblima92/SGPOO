@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class Operacoes 
+class Operacoes
 {
 public:
 	void Iniciar();

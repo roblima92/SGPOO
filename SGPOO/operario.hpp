@@ -3,7 +3,7 @@
 #define Operario_hpp
 #include "Empregado.hpp"
 
-class Operario : public Empregado 
+class Operario : public Empregado
 {
 public:
 	Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProd, float comissao);

@@ -3,7 +3,7 @@
 #define Fornecedor_hpp
 #include "Pessoa.hpp"
 
-class Fornecedor : public Pessoa 
+class Fornecedor : public Pessoa
 {
 public:
 	Fornecedor();

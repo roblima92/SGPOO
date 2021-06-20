@@ -3,7 +3,7 @@
 #define Administrador_hpp
 #include "Empregado.hpp"
 
-class Administrador : public Empregado 
+class Administrador : public Empregado
 {
 public:
 	Administrador(string nome, string endereco, string telefone, int codigoSetor, float salario, float ajudaDeCusto);

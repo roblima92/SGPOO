@@ -41,6 +41,7 @@ string Pessoa::getTelefone()
 	return telefone;
 }
 
+
 void Pessoa::imprimirDetalhes()
 {
 	imprimirDetalhesPessoas();

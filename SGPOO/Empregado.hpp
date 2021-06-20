@@ -3,7 +3,7 @@
 #define Empregado_hpp
 #include "Pessoa.hpp"
 
-class Empregado : public Pessoa 
+class Empregado : public Pessoa
 {
 public:
 	Empregado();

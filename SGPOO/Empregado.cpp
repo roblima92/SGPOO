@@ -26,11 +26,11 @@ void Empregado::setSalarioBase(float salario)
 }
 
 /*float Empregado::calculaSalario() {
-	//NADA AQUI. CADA CLASSE VAI REIMPLEMENTAR O METODO calculaSalario DA PARENT CLASS EMPREGADO. 
+	//NADA AQUI. CADA CLASSE VAI REIMPLEMENTAR O METODO calculaSalario DA PARENT CLASS EMPREGADO.
 	//PORTANTO, calculaSalario NÃO PRECISA SER IMPLEMENTADO NA CLASSE EMPREGADO.
 }*/
 
-float Empregado::descontoImposto() 
+float Empregado::descontoImposto()
 {
 	//METODO QUE CALCULA O IMPOSTO A SER DESCONTADO DO SALARIO;
 	if (salario < 1903.99) {

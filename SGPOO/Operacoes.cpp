@@ -104,6 +104,220 @@ void Operacoes::buscarVendedor()
     }
 }
 
+void Operacoes::editarpessoa()
+{
+    string nome;
+    string telefone;
+    string endereco;
+    float salario;
+    int codigoSetor;
+    float variavel;
+    float comissao;
+    string numero;
+    int id;
+    cout << "\n------------------------------------" << endl;
+    cout << "Para editar Fornecedor, digite --> 1 " << endl;
+    cout << "Para editar Funcionario--Adminstrador, digite --> 2 " << endl;
+    cout << "Para editar Funcionario--Operario, digite --> 3 " << endl;
+    cout << "Para editar Funcionario--Vendedor, digite --> 4 " << endl;
+    cin >> numero;
+    cout << "Qual o id da pessoa?" << endl;
+    cin >> id;
+    cout << "\n------------------------------------" << endl;
+    if (numero != "1")
+        cout << "Qual o novo nome do nosso funcionario?" << endl;
+    cin >> nome;
+    cout << "\nQual o novo endereço do nosso funcionario?" << endl;
+    cin >> endereco;
+    cout << "\nQual o novo telefone do nosso funcionario - Vendedor?" << endl;
+    cin >> telefone;
+    cout << "\nQual o novo salario base do funcionario - Vendedor?" << endl;
+    cin >> salario;
+
+
+    try {
+        switch (stoi(numero))
+        {
+        case 1:
+            if (numero == "1");
+            cout << "Qual o novo nome do nosso fornecedor?" << endl;
+            cin >> nome;
+            cout << "\nQual o novo endereço do nosso fornecedor?" << endl;
+            cin >> endereco;
+            cout << "\nQual o novo telefone do nosso fornecedor - Vendedor?" << endl;
+            cin >> telefone;
+            cout << "\nQual o valor divida pelo fornecedor?" << endl;
+            cin >> variavel;
+            cout << "\nQual a nova saldo do fornecedor?" << endl;
+            cin >> comissao;
+            fornecedores[id].setNome(nome);
+            fornecedores[id].setEndereço(endereco);
+            fornecedores[id].setTelefone(telefone);
+            fornecedores[id].setValorDivida(variavel);
+            fornecedores[id].setValorCredito(comissao);
+            break;
+        case 2:
+            cout << "\nQual o novo codigo do setor do funcionario - Vendedor?" << endl;
+            cin >> codigoSetor;
+            cout << "\nQual a nova ajuda de custa do funcionario?" << endl;
+            cin >> variavel;
+            administradores[id].setNome(nome);
+            administradores[id].setEndereço(endereco);
+            administradores[id].setTelefone(telefone);
+            administradores[id].setSalarioBase(salario);
+            administradores[id].setCodigoSetor(codigoSetor);
+            administradores[id].ajudadecusto(variavel);
+            break;
+        case 3:
+            cout << "\nQual o novo codigo do setor do funcionario - Vendedor?" << endl;
+            cin >> codigoSetor;
+            cout << "\nQual o valor produzido pelo funcionario?" << endl;
+            cin >> variavel;
+            cout << "\nQual a nova comissao do funcionario?" << endl;
+            cin >> comissao;
+            operarios[id].setNome(nome);
+            operarios[id].setEndereço(endereco);
+            operarios[id].setTelefone(telefone);
+            operarios[id].setSalarioBase(salario);
+            operarios[id].setCodigoSetor(codigoSetor);
+            operarios[id].setproducao(variavel);
+            operarios[id].setcomissao(comissao);
+            break;
+        case 4:
+            cout << "\nQual o novo codigo do setor do funcionario - Vendedor?" << endl;
+            cin >> codigoSetor;
+            cout << "\nQual o valor vendido pelo funcionario?" << endl;
+            cin >> variavel;
+            cout << "\nQual a nova comissao do funcionario?" << endl;
+            cin >> comissao;
+            vendedores[id].setNome(nome);
+            vendedores[id].setEndereço(endereco);
+            vendedores[id].setTelefone(telefone);
+            vendedores[id].setSalarioBase(salario);
+            vendedores[id].setCodigoSetor(codigoSetor);
+            vendedores[id].registrarVenda(variavel);
+            vendedores[id].setcomissao(comissao);
+            break;
+        default:
+            break;
+        }
+    }
+    catch (exception ex)
+    {
+    }
+}
+
+void Operacoes::listapessoa()
+{
+    for (size_t i = 0; i < administradores.size(); i++)
+    {
+        administradores[i].imprimedetalhespessoa();
+        cout << "administrador" << endl;
+        cout << " *********************" << endl;
+    }
+    for (size_t i = 0; i < fornecedores.size(); i++)
+    {
+        fornecedores[i].imprimedetalhespessoa();
+        cout << "fornecedor" << endl;
+        cout << " *********************" << endl;
+    }
+    for (size_t i = 0; i < vendedores.size(); i++)
+    {
+        vendedores[i].imprimedetalhespessoa();
+        cout << "vendedor" << endl;
+        cout << " *********************" << endl;
+    }
+    for (size_t i = 0; i < operarios.size(); i++)
+    {
+        operarios[i].imprimedetalhespessoa();
+        cout << "operario" << endl;
+        cout << " *********************" << endl;
+    }
+    system("pause");
+}
+
+void Operacoes::listafornecedor()
+{
+    int dividatotal = 0;
+    for (size_t i = 0; i < fornecedores.size(); i++)
+    {
+        fornecedores[i].imprimirDetalhes();
+        dividatotal = dividatotal + fornecedores[i].getValorDivida();
+        cout << " *********************" << endl;
+    }
+    cout << "o valor total que nossos fornecedores devem é R$" << dividatotal << endl;
+    system("pause");
+}
+
+void Operacoes::listaempregados()
+{
+    float totalfolha = 0;
+    for (size_t i = 0; i < administradores.size(); i++)
+    {
+        administradores[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + administradores[i].calculaSalario();
+        cout << " *********************" << endl;
+    }
+    for (size_t i = 0; i < operarios.size(); i++)
+    {
+        operarios[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + operarios[i].calculaSalario();
+        cout << " *********************" << endl;
+    }
+    for (size_t i = 0; i < vendedores.size(); i++)
+    {
+        vendedores[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + vendedores[i].calculaSalario();
+        cout << " *********************" << endl;
+    }
+    cout << "Nossa folha de pagamento custa " << totalfolha << endl;
+    system("pause");
+}
+
+void Operacoes::listaadministradores()
+{
+    float totalfolha = 0;
+    float ajudacusto = 0;
+    for (size_t i = 0; i < administradores.size(); i++)
+    {
+        administradores[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + administradores[i].calculaSalario();
+        ajudacusto = ajudacusto + administradores[i].getajudacusto();
+        cout << " *********************" << endl;
+    }
+    cout << "administradores recebem um salario total de R$" << totalfolha << endl;
+    cout << "as ajudas de custo somam: R$" << totalfolha << endl;
+    system("pause");
+}
+
+void Operacoes::listaoperarios()
+{
+    float totalfolha = 0;
+    float ajudacusto = 0;
+    for (size_t i = 0; i < operarios.size(); i++)
+    {
+        operarios[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + operarios[i].calculaSalario();
+        cout << " *********************" << endl;
+    }
+    cout << "operarios recebem um salario total de R$" << totalfolha << endl;
+    system("pause");
+}
+
+void Operacoes::listavendedores()
+{
+    float totalfolha = 0;
+    float ajudacusto = 0;
+    for (size_t i = 0; i < vendedores.size(); i++)
+    {
+        vendedores[i].imprimirDetalhesEmpregados();
+        totalfolha = totalfolha + vendedores[i].calculaSalario();
+        cout << " *********************" << endl;
+    }
+    cout << "vendedores recebem um salario total de R$" << totalfolha << endl;
+    system("pause");
+}
+
 void Operacoes::cadastrarAdministrador()
 {
     string nome;
@@ -160,6 +374,8 @@ void Operacoes::cadastrarFornecedor()
     cout << "\nQual o telefone do nosso Fornecedor?" << endl;
     cin >> telefone;
     cout << "\nQuanto de credito tem nosso Fornecedor?" << endl;
+    cout << "ID: " << fornecedores.size() << endl;
+    system("pause");
     cin >> credito;
     cout << "\nID: " << fornecedores.size() << endl;
     system("pause");
