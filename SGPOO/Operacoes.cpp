@@ -308,29 +308,28 @@ void Operacoes::editarPessoa()
 void Operacoes::listarPessoas()
 {
     cout << "\n" << endl;
-
-    for (size_t i = 0; i < administradores.size(); i++)
-    {
-        administradores[i].imprimirDetalhesPessoas();
-        cout << "-Administrador-" << endl;
-        cout << "\n*********************" << endl;
-    }
     for (size_t i = 0; i < fornecedores.size(); i++)
     {
         fornecedores[i].imprimirDetalhesPessoas();
         cout << "-Fornecedor-" << endl;
         cout << "\n*********************" << endl;
     }
-    for (size_t i = 0; i < vendedores.size(); i++)
+    for (size_t i = 0; i < administradores.size(); i++)
     {
-        vendedores[i].imprimirDetalhesPessoas();
-        cout << "-Vendedor-" << endl;
+        administradores[i].imprimirDetalhesPessoas();
+        cout << "-Administrador-" << endl;
         cout << "\n*********************" << endl;
     }
     for (size_t i = 0; i < operarios.size(); i++)
     {
         operarios[i].imprimirDetalhesPessoas();
         cout << "-Operario-" << endl;
+        cout << "\n*********************" << endl;
+    }
+    for (size_t i = 0; i < vendedores.size(); i++)
+    {
+        vendedores[i].imprimirDetalhesPessoas();
+        cout << "-Vendedor-" << endl;
         cout << "\n*********************" << endl;
     }
     system("pause");

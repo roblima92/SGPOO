@@ -16,18 +16,18 @@ int main()
     while (continuar)
     {
         system("cls");
-        cout << "Bem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto\n\n";
+        cout << "***Bem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto***\n\n";
         cout << "Selecione a opcao que deseja:" << endl;
-        cout << "\nCadastrar um Fornecedor, digite --> 1 " << endl;
-        cout << "Cadastrar um Funcionario, digite --> 2 " << endl;
-        cout << "Editar pessoa, digite --> 3 " << endl;
-        cout << "\nListar todas as pessoas do sistema, digite --> 4 " << endl;
-        cout << "Listar todos Empregados e seu salario total do sistema, digite --> 5 " << endl;
-        cout << "Listar todos Fornecedores do sistema, digite --> 6 " << endl;
-        cout << "Listar todos Administradores do sistema, digite --> 7 " << endl;
-        cout << "Listar todos Operarios do sistema, digite --> 8 " << endl;
-        cout << "Listar todos Vendedores do sistema, digite --> 9 " << endl;
-        cout << "\nFinalizar a execucao, digite --> 0 " << endl;
+        cout << "\n-Cadastrar um Fornecedor, digite --> 1 " << endl;
+        cout << "-Cadastrar um Funcionario, digite --> 2 " << endl;
+        cout << "\n-Editar pessoa, digite --> 3 " << endl;
+        cout << "\n-Listar todas as pessoas do sistema, digite --> 4 " << endl;
+        cout << "-Listar todos Empregados e seu salario total do sistema, digite --> 5 " << endl;
+        cout << "-Listar todos Fornecedores do sistema, digite --> 6 " << endl;
+        cout << "-Listar todos Administradores do sistema, digite --> 7 " << endl;
+        cout << "-Listar todos Operarios do sistema, digite --> 8 " << endl;
+        cout << "-Listar todos Vendedores do sistema, digite --> 9 " << endl;
+        cout << "\n-Finalizar a execucao, digite --> 0 " << endl;
         cin >> switch_on;
         switch (switch_on)
         {
@@ -40,9 +40,9 @@ int main()
             break;
         case 2:
             system("cls");
-            cout << "\nCadastrar um Adminstrador, digite --> 1 " << endl;
-            cout << "Cadastrar um Operario, digite --> 2 " << endl;
-            cout << "Cadastrar um Vendedor, digite --> 3 " << endl;
+            cout << "-Cadastrar um Adminstrador, digite --> 1 " << endl;
+            cout << "-Cadastrar um Operario, digite --> 2 " << endl;
+            cout << "-Cadastrar um Vendedor, digite --> 3 " << endl;
             cin >> switch_on;
             switch (switch_on) 
             {
