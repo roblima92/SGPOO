@@ -6,12 +6,13 @@
 class Operario : public Empregado
 {
 public:
-	Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProd, float comissao);
+	Operario(string nome, string endereco, string telefone, int codigoSetor, float salario, float valorProducao, float comissao);
 	Operario();
 	float calculaSalario();
 	void imprimirDetalhes();
 	void setProducao(float producao);
 	void setComissao(float comissao);
+	float getCommisaoValorProducao();
 
 private:
 	float valorProducao;

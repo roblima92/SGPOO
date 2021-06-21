@@ -1,10 +1,5 @@
 #include "Administrador.hpp"
 
-Administrador::Administrador()
-{
-	this->ajudaDeCusto = 0;
-}
-
 Administrador::Administrador(string nome, string endereco, string telefone, int codigoSetor, float salario, float ajudaDeCusto)
 {
 	this->nome = nome;
@@ -15,6 +10,11 @@ Administrador::Administrador(string nome, string endereco, string telefone, int 
 	this->ajudaDeCusto = ajudaDeCusto;
 }
 
+Administrador::Administrador()
+{
+	this->ajudaDeCusto = 0;
+}
+
 float Administrador::calculaSalario()
 {
 	return (salario - Empregado::descontoImposto()) + ajudaDeCusto; //AJUDA DE CUSTO VALOR NÃO TRIBUTAVEL PARA CALCULO DO SALARIO.
@@ -23,8 +23,8 @@ float Administrador::calculaSalario()
 void Administrador::imprimirDetalhes()
 {
 	Empregado::imprimirDetalhes();
-	cout << "Tem uma ajuda de custo de: " << ajudaDeCusto << endl;
-	cout << "Totalizando um salario de: " << calculaSalario();
+	cout << "Tem uma ajuda de custo de: R$" << ajudaDeCusto << endl;
+	cout << "Totalizando um salario de: R$" << calculaSalario();
 }
 
 void Administrador::setAjudaDeCusto(float ajuda)

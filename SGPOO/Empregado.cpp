@@ -1,11 +1,5 @@
 #include "Empregado.hpp"
 
-Empregado::Empregado()
-{
-	this->codigoSetor = 0;
-	this->salario = 0;
-}
-
 Empregado::Empregado(string nome, string endereço, string telefone, int codigoSetor, float salario)
 {
 	Pessoa::setNome(nome);
@@ -13,6 +7,12 @@ Empregado::Empregado(string nome, string endereço, string telefone, int codigoSe
 	Pessoa::setTelefone(telefone);
 	this->codigoSetor = codigoSetor;
 	this->salario = salario;
+}
+
+Empregado::Empregado()
+{
+	this->codigoSetor = 0;
+	this->salario = 0;
 }
 
 void Empregado::setCodigoSetor(int setor)
@@ -50,15 +50,15 @@ float Empregado::descontoImposto()
 	}
 }
 
+void Empregado::imprimirDetalhesEmpregados()
+{
+	imprimirDetalhes();
+}
+
 void Empregado::imprimirDetalhes()
 {
 	Pessoa::imprimirDetalhes();
 	cout << "Trabalha no Setor: " << codigoSetor << endl;
 	cout << "Salario Bruto: " << salario << endl;
 	cout << "Imposto Descontado: " << descontoImposto() << endl;
-}
-
-void Empregado::imprimirDetalhesEmpregados()
-{
-	this->imprimirDetalhes();
 }

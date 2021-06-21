@@ -6,19 +6,19 @@
 class Fornecedor : public Pessoa
 {
 public:
+	Fornecedor(string nome, string endereço, string telefone, float valorCredito, float valorDivida);
 	Fornecedor();
-	Fornecedor(string nome, string endereço, string telefone, int credito);
-	void setValorCredito(int credito);
-	void setValorDivida(int divida);
-	int getValorDivida();
-	int getValorCredito();
-	int obterSaldo();
+	void setValorCredito(float credito);
+	void setValorDivida(float divida);
+	float getValorDivida();
+	float getValorCredito();
+	float obterSaldo();
 	void gerarDetalhes();
 	void imprimirDetalhes();
 
 private:
-	int credito;
-	int divida;
+	float valorCredito;
+	float valorDivida;
 };
 #endif //!Fornecedor_hpp
 

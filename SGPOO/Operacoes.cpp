@@ -7,13 +7,16 @@
 
 void Operacoes::Iniciar()
 {
-    fornecedores.push_back(Fornecedor("Gabriel", "rua", "00000-000000", 100));
-    fornecedores.push_back(Fornecedor("Ronaldo", "ladera", "10000-000000", 100));
-    fornecedores.push_back(Fornecedor("Maicon", "rua", "20000-000000", 100));
-    administradores.push_back(Administrador("Robson", "alguma rua de sapucaia", "3474-5641", 4, 12500, 2000));
-    administradores.push_back(Administrador("maria", "alguma rua de gravatai", "3474-5641", 4, 12500, 2000));
-    operarios.push_back(Operario("Ruan", "maua", "34546-4654", 1, 4500, 6000, 5));
-    vendedores.push_back(Vendedor("et bilu", "espaço", "132465-65465", 666, 10000, 0, 1));
+    ///DADOS MOCADOS PARA TESTE DAS LISTAGEM
+    fornecedores.push_back(Fornecedor("Gabriel", "rua", "00000-000000", 100, 200));
+    fornecedores.push_back(Fornecedor("Ronaldo", "ladera", "10000-000000", 100, 300));
+    fornecedores.push_back(Fornecedor("Maicon", "rua", "20000-000000", 100, 500));
+    administradores.push_back(Administrador("Robson", "alguma rua de sapucaia", "3474-5641", 3, 12500, 2000));
+    administradores.push_back(Administrador("Administrador2", "alguma rua de gravatai", "3474-5641", 3, 10000, 3500));
+    operarios.push_back(Operario("Operario1", "maua", "34546-4654", 1, 4500, 6000, 5));
+    operarios.push_back(Operario("Operario2", "testando", "39996-4654", 1, 1000, 2500, 15));
+    vendedores.push_back(Vendedor("Vendedor1", "espaco", "132465-65465", 2, 6020, 2100, 16));
+    vendedores.push_back(Vendedor("Vendedor2", "infinita high way", "144465-65465", 2, 10000, 4500, 31));
 }
 
 void Operacoes::cadastrarOperario()
@@ -30,17 +33,17 @@ void Operacoes::cadastrarOperario()
     cin >> nome;
     cout << "\nOnde mora nosso funcionario - Operario?" << endl;
     cin >> endereco;
-    cout << "\nQual o telefone do nosso funcionario - Operario?\n" << endl;
+    cout << "\nQual o telefone do nosso funcionario - Operario?" << endl;
     cin >> telefone;
-    cout << "\nQual o salario base do funcionario - Operario?\n" << endl;
+    cout << "\nQual o salario base do funcionario - Operario?" << endl;
     cin >> salario;
-    cout << "\nQual o codigo do setor do funcionario - Operario?\n" << endl;
+    cout << "\nQual o codigo do setor do funcionario - Operario?" << endl;
     cin >> codigoSetor;
-    cout << "\nQual o valor produzido pelo funcionario - Operario?\n" << endl;
+    cout << "\nQual o valor produzido pelo funcionario - Operario?" << endl;
     cin >> valorProducao;
-    cout << "\nQual a comissao do funcionario - Operario?\n" << endl;
+    cout << "\nQual a comissao do funcionario - Operario?" << endl;
     cin >> comissao;
-    cout << "ID: " << operarios.size() + 1 << endl;
+    cout << "\n\nID: " << operarios.size() + 1 << endl;
     system("pause");
 
     operarios.push_back(Operario(nome, endereco, telefone, codigoSetor, salario, valorProducao, comissao));
@@ -49,7 +52,7 @@ void Operacoes::cadastrarOperario()
 void Operacoes::buscarOperario()
 {
     string nome;
-    cout << "Digite o nome ou id do operario" << endl;
+    cout << "Digite o nome ou ID do operario" << endl;
     cin >> nome;
 
     for (size_t i = 0; i < operarios.size(); i++)
@@ -85,7 +88,7 @@ void Operacoes::cadastrarVendedor()
     cin >> valorVendido;
     cout << "\nQual a comissao do funcionario - Vendedor?" << endl;
     cin >> comissao;
-    cout << "ID: " << vendedores.size() + 1 << endl;
+    cout << "\n\nID: " << vendedores.size() + 1 << endl;
     system("pause");
 
     vendedores.push_back(Vendedor(nome, endereco, telefone, codigoSetor, salario, valorVendido, comissao));
@@ -94,7 +97,7 @@ void Operacoes::cadastrarVendedor()
 void Operacoes::buscarVendedor()
 {
     string nome;
-    cout << "Digite o nome ou id do vendedor" << endl;
+    cout << "Digite o nome ou ID do vendedor" << endl;
     cin >> nome;
 
     for (size_t i = 0; i < vendedores.size(); i++)
@@ -127,7 +130,7 @@ void Operacoes::cadastrarAdministrador()
     cin >> codigoSetor;
     cout << "\nQual o valor da ajuda de custo recebida pelo funcionario - Administrador?" << endl;
     cin >> ajudaDeCusto;
-    cout << "\nID: " << administradores.size() + 1 << endl;
+    cout << "\n\nID: " << administradores.size() + 1 << endl;
     system("pause");
 
     administradores.push_back(Administrador(nome, endereco, telefone, codigoSetor, salario, ajudaDeCusto));
@@ -153,7 +156,8 @@ void Operacoes::cadastrarFornecedor()
     string nome;
     string telefone;
     string endereco;
-    int credito;
+    float credito;
+    float divida;
     cout << "\n------------------------------------" << endl;
     cout << "Qual o nome do nosso Fornecedor?" << endl;
     cin >> nome;
@@ -163,10 +167,12 @@ void Operacoes::cadastrarFornecedor()
     cin >> telefone;
     cout << "\nQuanto de credito tem nosso Fornecedor?" << endl;
     cin >> credito;
-    cout << "\nID: " << fornecedores.size() + 1 << endl;
+    cout << "\nQuanto de divida tem nosso Fornecedor?" << endl;
+    cin >> divida;
+    cout << "\n\nID: " << fornecedores.size() + 1 << endl;
     system("pause");
 
-    fornecedores.push_back(Fornecedor(nome, endereco, telefone, credito));
+    fornecedores.push_back(Fornecedor(nome, endereco, telefone, credito, divida));
 }
 
 void Operacoes::buscarFornecedor()
@@ -179,7 +185,6 @@ void Operacoes::buscarFornecedor()
     {
         if (fornecedores[i].getNome() == nome || to_string(i) == nome)
         {
-            cout << "ID: " << i << endl;
             fornecedores[i].imprimirDetalhes();
         }
     }
@@ -192,99 +197,103 @@ void Operacoes::editarPessoa()
     string endereco;
     float salario;
     int codigoSetor;
-    float variavel;
-    float comissao;
+    float variavel1;
+    float variavel2;
     string numero;
     int id;
+    system("cls");
     cout << "\n------------------------------------" << endl;
     cout << "Para editar Fornecedor, digite --> 1 " << endl;
-    cout << "Para editar Funcionario--Adminstrador, digite --> 2 " << endl;
-    cout << "Para editar Funcionario--Operario, digite --> 3 " << endl;
-    cout << "Para editar Funcionario--Vendedor, digite --> 4 " << endl;
+    cout << "Para editar Adminstrador, digite --> 2 " << endl;
+    cout << "Para editar Operario, digite --> 3 " << endl;
+    cout << "Para editar Vendedor, digite --> 4 " << endl;
     cin >> numero;
-    cout << "Qual o id da pessoa?" << endl;
+    cout << "Qual o ID da pessoa?" << endl;
     cin >> id;
     cout << "\n------------------------------------" << endl;
-    if(numero != "1")
-    cout << "Qual o novo nome do nosso funcionario?" << endl;
-    cin >> nome;
-    cout << "\nQual o novo endereço do nosso funcionario?" << endl;
-    cin >> endereco;
-    cout << "\nQual o novo telefone do nosso funcionario?" << endl;
-    cin >> telefone;
-    cout << "\nQual o novo salario base do funcionario?" << endl;
-    cin >> salario;
+    if (numero == "2" || numero == "3" || numero == "4") {
+        cout << "Qual o novo nome do nosso funcionario?" << endl;
+        cin >> nome;
+        cout << "\nQual o novo endereco do nosso funcionario?" << endl;
+        cin >> endereco;
+        cout << "\nQual o novo telefone do nosso funcionario?" << endl;
+        cin >> telefone;
+        cout << "\nQual o novo salario base do funcionario?" << endl;
+        cin >> salario;
+    }
 
-    
     try {
         switch (stoi(numero))
         {
         case 1:
-            if (numero == "1");
             cout << "Qual o novo nome do nosso fornecedor?" << endl;
             cin >> nome;
-            cout << "\nQual o novo endereço do nosso fornecedor?" << endl;
+            cout << "\nQual o novo endereco do nosso fornecedor?" << endl;
             cin >> endereco;
             cout << "\nQual o novo telefone do nosso fornecedor?" << endl;
             cin >> telefone;
             cout << "\nQual o valor divida pelo fornecedor?" << endl;
-            cin >> variavel;
+            cin >> variavel1;
             cout << "\nQual a nova saldo do fornecedor?" << endl;
-            cin >> comissao;
+            cin >> variavel2;
             fornecedores[id].setNome(nome);
             fornecedores[id].setEndereço(endereco);
             fornecedores[id].setTelefone(telefone);
-            fornecedores[id].setValorDivida(variavel);
-            fornecedores[id].setValorCredito(comissao);
+            fornecedores[id].setValorDivida(variavel1);
+            fornecedores[id].setValorCredito(variavel2);
             break;
         case 2:
             cout << "\nQual o novo codigo do setor do funcionario - Administrador?" << endl;
             cin >> codigoSetor;
             cout << "\nQual a nova ajuda de custa do funcionario - Administrador?" << endl;
-            cin >> variavel;
+            cin >> variavel1;
             administradores[id].setNome(nome);
             administradores[id].setEndereço(endereco);
             administradores[id].setTelefone(telefone);
             administradores[id].setSalarioBase(salario);
             administradores[id].setCodigoSetor(codigoSetor);
-            administradores[id].setAjudaDeCusto(variavel);
+            administradores[id].setAjudaDeCusto(variavel1);
             break;
         case 3:
             cout << "\nQual o novo codigo do setor do funcionario - Operario?" << endl;
             cin >> codigoSetor;
             cout << "\nQual o valor produzido pelo funcionario - Operario?" << endl;
-            cin >> variavel;
+            cin >> variavel1;
             cout << "\nQual a nova comissao do funcionario - Operario?" << endl;
-            cin >> comissao;
+            cin >> variavel2;
             operarios[id].setNome(nome);
             operarios[id].setEndereço(endereco);
             operarios[id].setTelefone(telefone);
             operarios[id].setSalarioBase(salario);
             operarios[id].setCodigoSetor(codigoSetor);
-            operarios[id].setProducao(variavel);
-            operarios[id].setComissao(comissao);
+            operarios[id].setProducao(variavel1);
+            operarios[id].setComissao(variavel2);
             break;
         case 4:
             cout << "\nQual o novo codigo do setor do funcionario - Vendedor?" << endl;
             cin >> codigoSetor;
             cout << "\nQual o valor vendido pelo funcionario - Vendedor?" << endl;
-            cin >> variavel;
+            cin >> variavel1;
             cout << "\nQual a nova comissao do funcionario - Vendedor?" << endl;
-            cin >> comissao;
+            cin >> variavel2;
             vendedores[id].setNome(nome);
             vendedores[id].setEndereço(endereco);
             vendedores[id].setTelefone(telefone);
             vendedores[id].setSalarioBase(salario);
             vendedores[id].setCodigoSetor(codigoSetor);
-            vendedores[id].registrarVenda(variavel);
-            vendedores[id].setComissao(comissao);
+            vendedores[id].registrarVenda(variavel1);
+            vendedores[id].setComissao(variavel2);
             break;
         default:
+            cout << "\nErro na operacao. Por favor, reinicie o processo" << endl;
+            system("pause");
             break;
         }
     }
     catch (exception ex)
     {
+        cout << "\nErro na operacao. Por favor, reinicie o processo" << endl;
+        system("pause");
     }
 }
 
@@ -295,67 +304,56 @@ void Operacoes::listarPessoas()
     for (size_t i = 0; i < administradores.size(); i++)
     {
         administradores[i].imprimirDetalhesPessoas();
-        cout << "Administrador" << endl;
+        cout << "-Administrador-" << endl;
         cout << "\n*********************" << endl;
     }
     for (size_t i = 0; i < fornecedores.size(); i++)
     {
         fornecedores[i].imprimirDetalhesPessoas();
-        cout << "Fornecedor" << endl;
+        cout << "-Fornecedor-" << endl;
         cout << "\n*********************" << endl;
     }
     for (size_t i = 0; i < vendedores.size(); i++)
     {
         vendedores[i].imprimirDetalhesPessoas();
-        cout << "Vendedor" << endl;
+        cout << "-Vendedor-" << endl;
         cout << "\n*********************" << endl;
     }
     for (size_t i = 0; i < operarios.size(); i++)
     {
         operarios[i].imprimirDetalhesPessoas();
-        cout << "Operario" << endl;
+        cout << "-Operario-" << endl;
         cout << "\n*********************" << endl;
     }
-    system("pause");
-}
-
-void Operacoes::listarFornecedores()
-{
-    int dividatotal = 0;
-    cout << "\n" << endl;
-    for (size_t i = 0; i < fornecedores.size(); i++)
-    {
-        fornecedores[i].imprimirDetalhes();
-        dividatotal = dividatotal + fornecedores[i].getValorDivida();
-        cout << "\n*********************" << endl;
-    }
-    cout << "O valor total que nossos fornecedores devem é R$" << dividatotal << endl;
     system("pause");
 }
 
 void Operacoes::listarEmpregados()
 {
     float totalFolha = 0;
-    cout << "\n" << endl;
     for (size_t i = 0; i < administradores.size(); i++)
     {
+        cout << "\n" << endl;
         administradores[i].imprimirDetalhesEmpregados();
         totalFolha = totalFolha + administradores[i].calculaSalario();
-        cout << "\n\n*********************" << endl;
+        cout << "\n*********************" << endl;
     }
     for (size_t i = 0; i < operarios.size(); i++)
     {
+        cout << "\n" << endl;
         operarios[i].imprimirDetalhesEmpregados();
         totalFolha = totalFolha + operarios[i].calculaSalario();
-        cout << "\n\n*********************" << endl;
+        cout << "*********************" << endl;
     }
     for (size_t i = 0; i < vendedores.size(); i++)
     {
+        cout << "\n" << endl;
         vendedores[i].imprimirDetalhesEmpregados();
         totalFolha = totalFolha + vendedores[i].calculaSalario();
-        cout << "\n\n*********************" << endl;
+        cout << "*********************" << endl;
     }
-    cout << "Nossa folha de pagamento custa " << totalFolha << endl;
+    cout << "\nNossa folha de pagamento custa: R$" << totalFolha << endl;
+    cout << "\n\n" << endl;
     system("pause");
 }
 
@@ -363,44 +361,61 @@ void Operacoes::listarAdministradores()
 {
     float totalFolha = 0;
     float ajudaCusto = 0;
-    cout << "\n" << endl;
     for (size_t i = 0; i < administradores.size(); i++)
     {
+        cout << "\n" << endl;
         administradores[i].imprimirDetalhesEmpregados();
         totalFolha = totalFolha + administradores[i].calculaSalario();
         ajudaCusto = ajudaCusto + administradores[i].getAjudaDeCusto();
         cout << "\n*********************" << endl;
     }
-    cout << "Administradores recebem um salario total de R$" << totalFolha << endl;
+    cout << "\nAdministradores recebem um salario total de: R$" << totalFolha << endl;
     cout << "As ajudas de custo somam: R$" << ajudaCusto << endl;
+    cout << "\n\n" << endl;
     system("pause");
 }
 
 void Operacoes::listarOperarios()
 {
-    float totalfolha = 0;
-    float ajudacusto = 0;
-    cout << "\n" << endl;
+    float totalFolha = 0;
     for (size_t i = 0; i < operarios.size(); i++)
     {
+        cout << "\n" << endl;
         operarios[i].imprimirDetalhesEmpregados();
-        totalfolha = totalfolha + operarios[i].calculaSalario();
-        cout << "\n*********************" << endl;
+        totalFolha = totalFolha + operarios[i].calculaSalario();
+        cout << "*********************" << endl;
     }
-    cout << "Operarios recebem um salario total de R$" << totalfolha << endl;
+    cout << "\nOperarios recebem um salario total de: R$" << totalFolha << endl;
+    cout << "\n\n" << endl;
     system("pause");
 }
 
 void Operacoes::listarVendedores()
 {
-    float totalfolha = 0;
-    cout << "\n" << endl;
+    float totalFolha = 0;
     for (size_t i = 0; i < vendedores.size(); i++)
     {
+        cout << "\n" << endl;
         vendedores[i].imprimirDetalhesEmpregados();
-        totalfolha = totalfolha + vendedores[i].calculaSalario();
-        cout << "\n*********************" << endl;
+        totalFolha = totalFolha + vendedores[i].calculaSalario();
+        cout << "*********************" << endl;
     }
-    cout << "Vendedores recebem um salario total de R$" << totalfolha << endl;
+    cout << "\nVendedores recebem um salario total de: R$" << totalFolha << endl;
+    cout << "\n\n" << endl;
+    system("pause");
+}
+
+void Operacoes::listarFornecedores()
+{
+    float dividaTotal = 0;
+    for (size_t i = 0; i < fornecedores.size(); i++)
+    {
+        cout << "\n" << endl;
+        fornecedores[i].imprimirDetalhes();
+        dividaTotal = dividaTotal - fornecedores[i].obterSaldo();
+        cout << "*********************" << endl;
+    }
+    cout << "\nValor total que nossos fornecedores devem: R$" << dividaTotal << endl;
+    cout << "\n\n" << endl;
     system("pause");
 }

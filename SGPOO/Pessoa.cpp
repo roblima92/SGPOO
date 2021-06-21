@@ -7,9 +7,7 @@ Pessoa::Pessoa(string nome, string endereco, string telefone)
 	this->telefone = telefone;
 }
 
-Pessoa::Pessoa()
-{
-}
+Pessoa::Pessoa(){}
 
 void Pessoa::setNome(string nome)
 {

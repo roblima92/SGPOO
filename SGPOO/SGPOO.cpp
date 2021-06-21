@@ -16,19 +16,17 @@ int main()
     while (continuar)
     {
         system("cls");
-        cout << "\n\n\nBem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto\n\n";
+        cout << "Bem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto\n\n";
         cout << "Selecione a opcao que deseja:" << endl;
         cout << "\nCadastrar um Fornecedor, digite --> 1 " << endl;
-        cout << "Cadastrar um Funcionario--Adminstrador, digite --> 2 " << endl;
-        cout << "Cadastrar um Funcionario--Operario, digite --> 3 " << endl;
-        cout << "Cadastrar um Funcionario--Vendedor, digite --> 4 " << endl;
-        cout << "\nEditar pessoa, digite --> 5 " << endl;
-        cout << "\nListar todas as pessoas do sistema, digite --> 6 " << endl;
-        cout << "Listar todas empregados e seu salario total do sistema, digite --> 7 " << endl;
-        cout << "Listar todas os fornecedores do sistema, digite --> 8 " << endl;
-        cout << "Listar todas os administradores do sistema, digite --> 9 " << endl;
-        cout << "Listar todas os operarios do sistema, digite --> 10 " << endl;
-        cout << "Listar todas os vendedores do sistema, digite --> 11 " << endl;
+        cout << "Cadastrar um Funcionario, digite --> 2 " << endl;
+        cout << "Editar pessoa, digite --> 3 " << endl;
+        cout << "\nListar todas as pessoas do sistema, digite --> 4 " << endl;
+        cout << "Listar todos Empregados e seu salario total do sistema, digite --> 5 " << endl;
+        cout << "Listar todos Fornecedores do sistema, digite --> 6 " << endl;
+        cout << "Listar todos Administradores do sistema, digite --> 7 " << endl;
+        cout << "Listar todos Operarios do sistema, digite --> 8 " << endl;
+        cout << "Listar todos Vendedores do sistema, digite --> 9 " << endl;
         cout << "\nFinalizar a execucao, digite --> 0 " << endl;
         cin >> switch_on;
         switch (switch_on)
@@ -41,33 +39,47 @@ int main()
             op.cadastrarFornecedor();
             break;
         case 2:
-            op.cadastrarAdministrador();
+            system("cls");
+            cout << "\nCadastrar um Adminstrador, digite --> 1 " << endl;
+            cout << "Cadastrar um Operario, digite --> 2 " << endl;
+            cout << "Cadastrar um Vendedor, digite --> 3 " << endl;
+            cin >> switch_on;
+            switch (switch_on) 
+            {
+            case 1:
+                op.cadastrarAdministrador();
+                break;
+            case 2:
+                op.cadastrarOperario();
+                break;
+            case 3:
+                op.cadastrarVendedor();
+                break;
+            default:
+                cout << "Nao consegui compreender, reinicie o processo por favor" << endl;
+                break;
+                system("pause");
+            }
             break;
         case 3:
-            op.cadastrarOperario();
-            break;
-        case 4:
-            op.cadastrarVendedor();
-            break;
-        case 5:
             op.editarPessoa();
             break;
-        case 6:
+        case 4:
             op.listarPessoas();
             break;
-        case 7:
+        case 5:
             op.listarEmpregados();
             break;
-        case 8:
+        case 6:
             op.listarFornecedores();
             break;
-        case 9:
+        case 7:
             op.listarAdministradores();
             break;
-        case 10:
+        case 8:
             op.listarOperarios();
             break;
-        case 11:
+        case 9:
             op.listarVendedores();
             break;
         default:
