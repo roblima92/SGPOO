@@ -30,11 +30,12 @@ void Operacoes::cadastrarOperario()
     float comissao;
     cout << "\n------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Operario?" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
     cout << "\nOnde mora nosso funcionario - Operario?" << endl;
-    cin >> endereco;
+    getline(cin, endereco);
     cout << "\nQual o telefone do nosso funcionario - Operario?" << endl;
-    cin >> telefone;
+    getline(cin, telefone);
     cout << "\nQual o salario base do funcionario - Operario?" << endl;
     cin >> salario;
     cout << "\nQual o codigo do setor do funcionario - Operario?" << endl;
@@ -75,11 +76,12 @@ void Operacoes::cadastrarVendedor()
     float comissao;
     cout << "\n------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Vendedor?" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
     cout << "\nOnde mora nosso funcionario - Vendedor?" << endl;
-    cin >> endereco;
+    getline(cin, endereco);
     cout << "\nQual o telefone do nosso funcionario - Vendedor?" << endl;
-    cin >> telefone;
+    getline(cin, telefone);
     cout << "\nQual o salario base do funcionario - Vendedor?" << endl;
     cin >> salario;
     cout << "\nQual o codigo do setor do funcionario - Vendedor?" << endl;
@@ -119,11 +121,12 @@ void Operacoes::cadastrarAdministrador()
     float ajudaDeCusto;
     cout << "\n------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Administrador?" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
     cout << "\nOnde mora nosso funcionario - Administrador?" << endl;
-    cin >> endereco;
+    getline(cin, endereco);
     cout << "\nQual o telefone do nosso funcionario - Administrador?" << endl;
-    cin >> telefone;
+    getline(cin, telefone);
     cout << "\nQual o salario base do funcionario - Administrador?" << endl;
     cin >> salario;
     cout << "\nQual o codigo do setor do funcionario - Administrador?" << endl;
@@ -160,11 +163,12 @@ void Operacoes::cadastrarFornecedor()
     float divida;
     cout << "\n------------------------------------" << endl;
     cout << "Qual o nome do nosso Fornecedor?" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome);
     cout << "\nOnde mora nosso Fornecedor?" << endl;
-    cin >> endereco;
+    getline(cin, endereco);
     cout << "\nQual o telefone do nosso Fornecedor?" << endl;
-    cin >> telefone;
+    getline(cin, telefone);
     cout << "\nQuanto de credito tem nosso Fornecedor?" << endl;
     cin >> credito;
     cout << "\nQuanto de divida tem nosso Fornecedor?" << endl;
@@ -213,11 +217,12 @@ void Operacoes::editarPessoa()
     cout << "\n------------------------------------" << endl;
     if (numero == "2" || numero == "3" || numero == "4") {
         cout << "Qual o novo nome do nosso funcionario?" << endl;
-        cin >> nome;
+        cin.ignore();
+        getline(cin, nome);
         cout << "\nQual o novo endereco do nosso funcionario?" << endl;
-        cin >> endereco;
+        getline(cin, endereco);
         cout << "\nQual o novo telefone do nosso funcionario?" << endl;
-        cin >> telefone;
+        getline(cin, telefone);
         cout << "\nQual o novo salario base do funcionario?" << endl;
         cin >> salario;
     }
@@ -227,20 +232,21 @@ void Operacoes::editarPessoa()
         {
         case 1:
             cout << "Qual o novo nome do nosso fornecedor?" << endl;
-            cin >> nome;
+            cin.ignore();
+            getline(cin, nome);
             cout << "\nQual o novo endereco do nosso fornecedor?" << endl;
-            cin >> endereco;
+            getline(cin, endereco);
             cout << "\nQual o novo telefone do nosso fornecedor?" << endl;
-            cin >> telefone;
-            cout << "\nQual o valor divida pelo fornecedor?" << endl;
+            getline(cin, telefone);
+            cout << "\nQual o novo valor de credito do fornecedor?" << endl;
             cin >> variavel1;
-            cout << "\nQual a nova saldo do fornecedor?" << endl;
+            cout << "\nQual o novo valor da divida do fornecedor?" << endl;
             cin >> variavel2;
             fornecedores[id].setNome(nome);
             fornecedores[id].setEndereço(endereco);
             fornecedores[id].setTelefone(telefone);
-            fornecedores[id].setValorDivida(variavel1);
-            fornecedores[id].setValorCredito(variavel2);
+            fornecedores[id].setValorCredito(variavel1);
+            fornecedores[id].setValorDivida(variavel2);
             break;
         case 2:
             cout << "\nQual o novo codigo do setor do funcionario - Administrador?" << endl;
@@ -289,6 +295,8 @@ void Operacoes::editarPessoa()
             system("pause");
             break;
         }
+
+        system("pause");
     }
     catch (exception ex)
     {
