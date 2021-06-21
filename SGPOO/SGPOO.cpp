@@ -40,9 +40,11 @@ int main()
             break;
         case 2:
             system("cls");
+            cout << "-----------------------------------------" << endl;
             cout << "-Cadastrar um Adminstrador, digite --> 1 " << endl;
             cout << "-Cadastrar um Operario, digite --> 2 " << endl;
             cout << "-Cadastrar um Vendedor, digite --> 3 " << endl;
+            cout << "-----------------------------------------" << endl;
             cin >> switch_on;
             switch (switch_on) 
             {

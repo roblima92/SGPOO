@@ -28,7 +28,7 @@ void Operacoes::cadastrarOperario()
     int codigoSetor;
     float valorProducao;
     float comissao;
-    cout << "\n------------------------------------" << endl;
+    cout << "\n-----------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Operario?" << endl;
     cin.ignore();
     getline(cin, nome);
@@ -74,7 +74,7 @@ void Operacoes::cadastrarVendedor()
     int codigoSetor;
     float valorVendido;
     float comissao;
-    cout << "\n------------------------------------" << endl;
+    cout << "\n-----------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Vendedor?" << endl;
     cin.ignore();
     getline(cin, nome);
@@ -119,7 +119,7 @@ void Operacoes::cadastrarAdministrador()
     float salario;
     int codigoSetor;
     float ajudaDeCusto;
-    cout << "\n------------------------------------" << endl;
+    cout << "\n-----------------------------------------" << endl;
     cout << "Qual o nome do nosso funcionario - Administrador?" << endl;
     cin.ignore();
     getline(cin, nome);
@@ -161,7 +161,7 @@ void Operacoes::cadastrarFornecedor()
     string endereco;
     float credito;
     float divida;
-    cout << "\n------------------------------------" << endl;
+    cout << "\n-----------------------------------------" << endl;
     cout << "Qual o nome do nosso Fornecedor?" << endl;
     cin.ignore();
     getline(cin, nome);
@@ -206,15 +206,16 @@ void Operacoes::editarPessoa()
     string numero;
     int id;
     system("cls");
-    cout << "\n------------------------------------" << endl;
+    cout << "--------------------------------------" << endl;
     cout << "Para editar Fornecedor, digite --> 1 " << endl;
     cout << "Para editar Adminstrador, digite --> 2 " << endl;
     cout << "Para editar Operario, digite --> 3 " << endl;
     cout << "Para editar Vendedor, digite --> 4 " << endl;
+    cout << "--------------------------------------" << endl;
     cin >> numero;
     cout << "Qual o ID da pessoa?" << endl;
     cin >> id;
-    cout << "\n------------------------------------" << endl;
+    cout << "\n--------------------------------------" << endl;
     if (numero == "2" || numero == "3" || numero == "4") {
         cout << "Qual o novo nome do nosso funcionario?" << endl;
         cin.ignore();
