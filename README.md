@@ -1,4 +1,4 @@
-# SGPOO - Sistema de Gestao de Pessoas Orientado a Objeto
+# SGPOO - Sistema de Gestão de Pessoas Orientado a Objeto
 Trabalho destinado a cadeira de Programação Orientada a Objeto, ministrada no primeiro semestre de 2021.
 
 # Link para Demo:
