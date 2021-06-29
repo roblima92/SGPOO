@@ -25,4 +25,3 @@ protected:
 	string telefone;
 };
 #endif //!Pessoa_hpp
-

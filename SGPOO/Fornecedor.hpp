@@ -21,4 +21,3 @@ private:
 	float valorDivida;
 };
 #endif //!Fornecedor_hpp
-

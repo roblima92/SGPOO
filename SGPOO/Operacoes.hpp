@@ -37,4 +37,3 @@ private:
 	vector<Administrador> administradores;
 };
 #endif //!Operações_hpp
-
