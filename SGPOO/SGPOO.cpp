@@ -16,7 +16,7 @@ int main()
     while (continuar)
     {
         system("cls");
-        cout << "***Bem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado ao Objeto***\n\n";
+        cout << "***Bem vindo ao SGPOO: Sistema de Gestao de Pessoas Orientado a Objeto***\n\n";
         cout << "Selecione a opcao que deseja:" << endl;
         cout << "\n-Cadastrar um Fornecedor, digite --> 1 " << endl;
         cout << "-Cadastrar um Funcionario, digite --> 2 " << endl;
