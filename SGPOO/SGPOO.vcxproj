@@ -139,15 +139,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Administrador.cpp" />
+    <ClCompile Include="Empregado.cpp" />
     <ClCompile Include="Fornecedor.cpp" />
-    <ClCompile Include="Operações.cpp" />
+    <ClCompile Include="Operacoes.cpp" />
+    <ClCompile Include="Operario.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="SGPOO.cpp" />
+    <ClCompile Include="Vendedor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Administrador.hpp" />
+    <ClInclude Include="Empregado.hpp" />
     <ClInclude Include="Fornecedor.hpp" />
-    <ClInclude Include="Operações.hpp" />
+    <ClInclude Include="Operacoes.hpp" />
+    <ClInclude Include="Operario.hpp" />
     <ClInclude Include="Pessoa.hpp" />
+    <ClInclude Include="Vendedor.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

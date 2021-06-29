@@ -1,15 +1,13 @@
 #include "Pessoa.hpp"
 
-Pessoa::Pessoa(string nome, string endereço, string telefone)
+Pessoa::Pessoa(string nome, string endereco, string telefone)
 {
 	this->nome = nome;
-	this->endereço = endereço;
+	this->endereco = endereco;
 	this->telefone = telefone;
 }
 
-Pessoa::Pessoa()
-{
-}
+Pessoa::Pessoa(){}
 
 void Pessoa::setNome(string nome)
 {
@@ -21,14 +19,14 @@ string Pessoa::getNome()
 	return nome;
 }
 
-void Pessoa::setEndereço(string endereço)
+void Pessoa::setEndereço(string endereco)
 {
-	this->endereço = endereço;
+	this->endereco = endereco;
 }
 
 string Pessoa::getEndereço()
 {
-	return endereço;
+	return endereco;
 }
 
 void Pessoa::setTelefone(string telefone)
@@ -39,4 +37,17 @@ void Pessoa::setTelefone(string telefone)
 string Pessoa::getTelefone()
 {
 	return telefone;
+}
+
+
+void Pessoa::imprimirDetalhes()
+{
+	imprimirDetalhesPessoas();
+}
+
+void Pessoa::imprimirDetalhesPessoas()
+{
+	cout << "Nome: " << nome << endl;
+	cout << "Endereco: " << endereco << endl;
+	cout << "Telefone: " << telefone << endl;
 }

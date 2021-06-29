@@ -1,51 +1,55 @@
 #include "Fornecedor.hpp"
 
+Fornecedor::Fornecedor(string nome, string endereço, string telefone, float valorCredito, float valorDivida)
+{
+	this->nome = nome;
+	this->endereco = endereço;
+	this->telefone = telefone;
+	this->valorCredito = valorCredito;
+	this->valorDivida = valorDivida;
+}
+
 Fornecedor::Fornecedor()
 {
-	this->credito = 0;
-	this->divida = 0;
+	this->valorCredito = 0;
+	this->valorDivida = 0;
 }
 
-Fornecedor::Fornecedor(string nome, string endereço, string telefone, int credito)
+void Fornecedor::setValorCredito(float valorCredito)
 {
-	Pessoa::setNome(nome);
-	Pessoa::setEndereço(endereço);
-	Pessoa::setTelefone(telefone);
-	this->credito = credito;
-	this->divida = 0;
+	this->valorCredito = valorCredito;
 }
 
-void Fornecedor::SetValorCredito(int credito)
+void Fornecedor::setValorDivida(float valorDivida)
 {
-	this->credito = credito;
+	this->valorDivida = valorDivida;
 }
 
-void Fornecedor::SetValorDivida(int divida)
+float Fornecedor::getValorDivida()
 {
-	this->divida = divida;
+	return valorDivida;
 }
 
-int Fornecedor::GetValorDivida()
+float Fornecedor::getValorCredito()
 {
-	return divida;
+	return valorCredito;
 }
 
-int Fornecedor::GetValorCredito()
+float Fornecedor::obterSaldo()
 {
-	return credito;
+	return valorCredito - valorDivida;
 }
 
-int Fornecedor::obtersaldo()
-{
-	return credito - divida;
-}
-
-void Fornecedor::GerarDetalhes()
+void Fornecedor::gerarDetalhes()
 {
 	cout << "O fornecedor: " << Pessoa::getNome() << endl;
 	cout << "Esta situado em: " << Pessoa::getEndereço() << endl;
 	cout << "Telefone: " << Pessoa::getTelefone() << endl;
-	cout << "Tem o saldo de: " << this->obtersaldo() << endl;
+	cout << "Tem o saldo de: R$" << this->obterSaldo() << endl;
 }
 
-
+void Fornecedor::imprimirDetalhes()
+{
+	Pessoa::imprimirDetalhes();
+	cout << "Tem saldo de: R$" << obterSaldo() << endl;
+}

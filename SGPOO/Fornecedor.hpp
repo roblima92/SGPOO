@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef Fornecedor_hpp
 #define Fornecedor_hpp
 #include "Pessoa.hpp"
@@ -6,17 +6,19 @@
 class Fornecedor : public Pessoa
 {
 public:
+	Fornecedor(string nome, string endereço, string telefone, float valorCredito, float valorDivida);
 	Fornecedor();
-	Fornecedor(string nome, string endere�o,string telefone, int credito);
-	void SetValorCredito(int credito);
-	void SetValorDivida(int divida);
-	int GetValorDivida();
-	int GetValorCredito();
-	int obtersaldo();
-	void GerarDetalhes();
+	void setValorCredito(float credito);
+	void setValorDivida(float divida);
+	float getValorDivida();
+	float getValorCredito();
+	float obterSaldo();
+	void gerarDetalhes();
+	void imprimirDetalhes();
+
 private:
-	int credito;
-	int divida;
+	float valorCredito;
+	float valorDivida;
 };
-#endif // !Fornecedor_hpp
+#endif //!Fornecedor_hpp
 
